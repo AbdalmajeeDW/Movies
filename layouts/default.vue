@@ -40,7 +40,7 @@
         </div>
       </div>
       <Tabs />
-      <Nuxt />
+      <Nuxt keep-alive/>
       <Footer />
     </v-main>
   </v-app>

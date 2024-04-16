@@ -24,7 +24,6 @@
 .app-dark .site-footer {
   box-shadow: 1px 1px 4px 1px rgb(104, 104, 104);
   background-color: #252525 !important;
-  padding: 45px 0 20px;
   font-size: 15px;
   line-height: 24px;
   color: #dadada !important;
@@ -142,7 +141,7 @@
   background-color: #007bb6;
 }
 .app-dark .site-footer .social-icons a.dribbble:hover {
-  background-color: #ea4c89;
+  background-color: green;
 }
 @media (max-width: 767px) {
   .app-dark .social-icons li.title {
@@ -247,11 +246,11 @@
 .app-dark .home .movies .movies-grid .movie .movie-img .overvieww {
   line-height: 1.5;
   position: absolute;
-  bottom: 0;
+  bottom: -26px;
   background-color: #00548f;
   padding: 12px;
   color: #fff;
-  transform: translateY(100%);
+  transform: translateY(108%);
   transition: 0.2s ease-in-out all;
 }
 .app-dark .home .movies .movies-grid .movie .info {
@@ -534,11 +533,11 @@
 .app-light .home .movies .movies-grid .movie .movie-img .overvieww {
   line-height: 1.5;
   position: absolute;
-  bottom: 0;
+  bottom: -30;
   background-color: #00548f;
   padding: 12px;
   color: #fff;
-  transform: translateY(100%);
+  transform: translateY(108%);
   transition: 0.2s ease-in-out all;
 }
 .app-light .home .movies .movies-grid .movie .info {
