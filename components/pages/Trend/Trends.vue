@@ -9,8 +9,6 @@ export default {
   components: { CardFilters },
   created() {
     this.$store.dispatch('movies/getMoviesTrends')
-    this.$store.dispatch('movies/getMoviesTrends')
-
   },
   computed: {
     getMoviesTrends() {
