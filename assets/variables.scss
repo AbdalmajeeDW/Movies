@@ -342,7 +342,7 @@ $main_color_dark: #252525;
     }
 
     .text-container {
-      z-index: 99;
+      z-index: 1;
       position: absolute;
       top: 0;
       margin: 0;
@@ -660,7 +660,7 @@ $main_color_dark: #252525;
     }
 
     .text-container {
-      z-index: 99;
+      z-index: 1;
       position: absolute;
       top: 0;
       margin: 0;
@@ -781,6 +781,18 @@ $main_color_dark: #252525;
             font-size: 56px;
             font-weight: 400;
           }
+          @media (max-width: 600px) {
+            .movie-fact {
+              margin-top: 12px;
+              font-size: 14px;
+              line-height: 1.5;
+
+              span {
+                font-weight: 600;
+                text-decoration: underline;
+              }
+            }
+          }
 
           .movie-fact {
             margin-top: 12px;
@@ -790,6 +802,18 @@ $main_color_dark: #252525;
             span {
               font-weight: 600;
               text-decoration: underline;
+            }
+            @media (max-width: 600px) {
+              .movie-fact {
+                margin-top: 12px;
+                font-size: 14px;
+                line-height: 1.5;
+  
+                span {
+                  font-weight: 600;
+                  text-decoration: underline;
+                }
+              }
             }
           }
 

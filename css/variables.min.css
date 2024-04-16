@@ -294,7 +294,7 @@
      object-fit: cover;
 }
 .app-dark .hero .text-container {
-  z-index: 99;
+  z-index: 1;
   position: absolute;
   top: 0;
   margin: 0;
@@ -581,7 +581,7 @@
      object-fit: cover;
 }
 .app-light .hero .text-container {
-  z-index: 99;
+  z-index: 1;
   position: absolute;
   top: 0;
   margin: 0;
@@ -693,6 +693,17 @@
   font-size: 56px;
   font-weight: 400;
 }
+@media (max-width: 600px) {
+  .app-light .col .container .movie-info .movie-content .movie-fact {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .app-light .col .container .movie-info .movie-content .movie-fact span {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
 .app-light .col .container .movie-info .movie-content .movie-fact {
   margin-top: 12px;
   font-size: 20px;
@@ -701,6 +712,17 @@
 .app-light .col .container .movie-info .movie-content .movie-fact span {
   font-weight: 600;
   text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .app-light .col .container .movie-info .movie-content .movie-fact .movie-fact {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .app-light .col .container .movie-info .movie-content .movie-fact .movie-fact span {
+    font-weight: 600;
+    text-decoration: underline;
+  }
 }
 .app-light .col .container .movie-info .movie-content .tagline {
   font-style: italic;

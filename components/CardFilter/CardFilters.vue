@@ -1,4 +1,4 @@
-<template lang="">
+  <template lang="">
   <div>
     <div class="home">
       <div class="container movies">

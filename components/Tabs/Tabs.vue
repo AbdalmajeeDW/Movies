@@ -20,6 +20,6 @@ export default {
   align-items: center;
   gap: 30px;
   margin-top: 30px !important;
-  margin-left: 50px;
+  // margin-left: 50px;
 }
 </style>
