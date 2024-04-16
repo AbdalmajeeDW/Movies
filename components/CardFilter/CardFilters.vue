@@ -1,0 +1,66 @@
+<template lang="">
+  <div>
+    <div class="home">
+      <div class="container movies">
+        <div id="movies-grid" class="movies-grid">
+          <div class="movie" v-for="(movie, index) in dataFilter" :key="index">
+            <div class="movie-img">
+              <img
+                :src="`https://image.tmdb.org/t/p/w500/${movie.poster_path}`"
+                alt=""
+              />
+              <p class="review">
+                {{ movie.vote_average }}
+              </p>
+              <p class="overvieww">
+                {{ movie.overview }}
+              </p>
+            </div>
+            <div class="infoF">
+              <p class="release">
+                Released:
+                {{
+                  new Date(movie.release_date).toLocaleDateString("en-us", {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                  })
+                }}
+              </p>
+              <div @click="() => movieById(movie.id)" type="">
+                <NuxtLink
+                  class="button button-light"
+                  :to="{ name: 'movies-movieid' }"
+                >
+                  Get Morec
+                </NuxtLink>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><vl-feature >
+        <vl-geom-point
+          :coordinates="[5.371509,52.171619]"
+        ></vl-geom-point>
+        <vl-style-box>
+          <vl-style-circle :z-index="9999" :radius="20">
+            <vl-style-fill color="transparent" />
+            <vl-style-stroke color="red"></vl-style-stroke>
+          </vl-style-circle>
+        </vl-style-box>
+      </vl-feature>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  props: {
+    dataFilter: Array,
+  },
+  methods: {
+    movieById(id) {
+      this.$store.dispatch("movies/getMovieById", id);
+    },
+  },
+};
+</script>
