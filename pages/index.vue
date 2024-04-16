@@ -11,9 +11,7 @@ export default {
     Home
   },
   methods:{
-alert(){
-  
-}
+
   }
 }
 </script>

@@ -15,7 +15,8 @@
         <v-switch @click="toggleDarkMode" hide-details inset></v-switch>
       </template>
     </Drawer>
-    <v-main>
+   
+    <v-main >
       <div class="hero">
         <img src="../assets/images/movieHero.jpg" alt="" />
         <div class="text-container">
@@ -39,7 +40,7 @@
         </div>
       </div>
       <Tabs />
-      <Nuxt keep-alive />
+      <Nuxt />
       <Footer />
     </v-main>
   </v-app>
@@ -77,13 +78,20 @@ export default {
   data() {
     return {
       model: false,
+      loader: true,
     };
+  },
+  computed: {
+    allMovies() {
+      return this.$store.state.movies.allMovies.length;
+    },
   },
   created() {
     const storedValue = localStorage.getItem("dark");
     if (storedValue !== null) {
       this.model = storedValue === "true";
     }
+ 
   },
   methods: {
     toggleDarkMode() {

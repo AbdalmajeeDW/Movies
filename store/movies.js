@@ -7,6 +7,7 @@ export const state = () => ({
   TopRatedMovies: [],
   isLoading: true,
   currentState: "",
+  loading: false,
 });
 
 export const mutations = {
@@ -16,7 +17,10 @@ export const mutations = {
     state.isLoading = false;
   },
   changeAllMovies(state, e) {
+    state.loading = true;
     state.allMovies.push(e);
+    if (state.allMovies.length === 0) state.loading = true;
+    else state.loading = false;
   },
   removeAllMovies(state) {
     state.allMovies = [];

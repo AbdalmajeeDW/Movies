@@ -1,4 +1,5 @@
 <template>
+  
   <div class="home">
     <div class="container search">
       <input
@@ -10,13 +11,22 @@
       />
       <button @click="clear" class="button">Clear</button>
     </div>
-    <!-- <Loading v-if="!this.$store.state.movies.currentState" /> -->
-    <CardFilters :data-filter="allMovies" />
+    <div>
+    
+    <div v-if="loading" class="centered">
+      <div class="blob-1"></div>
+      <div class="blob-2"></div>
+    </div>
+    <dir v-else>
+    
+    <CardFilters :data-filter="allMovies"  />
     <CardFilters :data-filter="searchMovies" />
+    </dir>
+    
+    </div>
   </div>
 </template>
-  </div>
-</template>
+
 <script>
 import CardFilters from "../CardFilter/CardFilters.vue";
 import Loading from "../Lodaing/Loading.vue";
@@ -33,7 +43,7 @@ export default {
       sea: "",
     };
   },
-  fetchDelay: 1000,
+  
   methods: {
     search() {
       this.$store.dispatch("movies/searchMovies", this.searching);
@@ -43,11 +53,16 @@ export default {
     clear() {
       this.$store.dispatch("movies/removeAllMovies");
       this.$store.dispatch("movies/getAllMovies");
+      console.log(this.loading);
     },
   },
+
   computed: {
     allMovies() {
       return this.$store.state.movies.allMovies;
+    },
+    loading() {
+      return this.$store.state.movies.loading;
     },
     searchMovies() {
       return this.$store.state.movies.searchAllMovies;

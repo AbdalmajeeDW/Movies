@@ -38,17 +38,8 @@
             </div>
           </div>
         </div>
-      </div><vl-feature >
-        <vl-geom-point
-          :coordinates="[5.371509,52.171619]"
-        ></vl-geom-point>
-        <vl-style-box>
-          <vl-style-circle :z-index="9999" :radius="20">
-            <vl-style-fill color="transparent" />
-            <vl-style-stroke color="red"></vl-style-stroke>
-          </vl-style-circle>
-        </vl-style-box>
-      </vl-feature>
+      </div>
+  
     </div>
   </div>
 </template>
