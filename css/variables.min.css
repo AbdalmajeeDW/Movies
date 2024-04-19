@@ -2,7 +2,7 @@
 .loader {
   width: 48px;
   height: 48px;
-  border: 5px dotted #FFF;
+  border: 5px dotted #fff;
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -71,7 +71,8 @@ html {
 .app-dark .v-icon.v-icon {
   color: white;
 }
-.app-dark .v-toolbar__content, .app-dark .v-toolbar__extension {
+.app-dark .v-toolbar__content,
+.app-dark .v-toolbar__extension {
   background: #252525 !important;
 }
 .app-dark .v-toolbar__title {
@@ -145,6 +146,20 @@ html {
   .app-dark .site-footer {
     padding-bottom: 0;
   }
+  .app-dark .site-footer {
+    box-shadow: 1px 1px 4px 1px rgb(104, 104, 104);
+    background-color: #252525 !important;
+    padding: 45px 0 20px;
+    font-size: 15px;
+    padding: 20px 75px;
+    line-height: 24px;
+    color: #f5f5f5 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
   .app-dark .home .search {
     padding: 20px 75px;
     display: flex;
@@ -211,6 +226,10 @@ html {
   background-color: green;
 }
 @media (max-width: 767px) {
+  .app-dark .hero .text-container h1 {
+    font-size: 35px;
+    text-wrap: nowrap;
+  }
   .app-dark .home .search {
     padding: 20px 75px;
     display: flex;
@@ -409,6 +428,11 @@ html {
 @media (min-width: 750px) {
   .app-dark .hero .text-container h1 {
     font-size: 84px;
+  }
+}
+@media (max-width: 750px) {
+  .app-dark .hero .text-container h1 {
+    font-size: 35px;
   }
 }
 .app-dark .hero .text-container h1 span {
@@ -890,6 +914,27 @@ html {
   }
 }
 @media (max-width: 767px) {
+  .app-light .hero .mini-heading {
+    font-size: 20px;
+  }
+  .app-light .hero .text-container h1 {
+    font-size: 35px;
+    text-wrap: nowrap;
+  }
+  .app-light .site-footer {
+    box-shadow: 1px 1px 4px 1px rgb(104, 104, 104);
+    background-color: #f5f5f5 !important;
+    padding: 45px 0 20px;
+    font-size: 15px;
+    padding: 20px 75px;
+    line-height: 24px;
+    color: #252525 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
   .app-light .movie .overvieww {
     line-height: 1.5;
     position: absolute;
@@ -970,6 +1015,13 @@ html {
   background-color: #ea4c89;
 }
 @media (max-width: 767px) {
+  .app-light .hero .mini-heading {
+    font-size: 20px;
+  }
+  .app-light .hero .text-container h1 {
+    font-size: 35px;
+    text-wrap: nowrap;
+  }
   .app-light .social-icons li.title {
     display: block;
     margin-right: 0;
@@ -988,7 +1040,8 @@ html {
   filter: blur(10px) contrast(20);
 }
 
-.blob-1, .blob-2 {
+.blob-1,
+.blob-2 {
   width: 70px;
   height: 70px;
   position: absolute;

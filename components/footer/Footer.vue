@@ -3,7 +3,7 @@
       
           <div>
             <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by 
-         <a href="#">TMDB</a>
+         <a href="#">SY Movies</a>
             </p>
           </div>
           <div >
