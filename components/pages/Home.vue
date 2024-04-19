@@ -1,7 +1,8 @@
 <template>
   
   <div class="home">
-    <div class="container search">
+  
+    <div class="search">
       <input
         style="border"
         @keyup.enter="search"
@@ -12,16 +13,12 @@
       <button @click="clear" class="button">Clear</button>
     </div>
     <div>
-    
-    <div v-if="loading" class="centered">
-      <div class="blob-1"></div>
-      <div class="blob-2"></div>
-    </div>
-    <dir v-else>
+      <span v-if="loader"class="loader"></span>
+
     
     <CardFilters :data-filter="allMovies"  />
     <CardFilters :data-filter="searchMovies" />
-    </dir>
+    
     
     </div>
   </div>
@@ -49,6 +46,7 @@ export default {
       this.$store.dispatch("movies/searchMovies", this.searching);
       this.searching = "";
       this.$store.dispatch("movies/removeAllMovies");
+      console.log(this.loader);
     },
     clear() {
       this.$store.dispatch("movies/removeAllMovies");
@@ -66,6 +64,9 @@ export default {
     },
     searchMovies() {
       return this.$store.state.movies.searchAllMovies;
+    },
+    loader() {
+      return this.$store.state.movies.loader;
     },
   },
   components: { Loading, CardFilters },

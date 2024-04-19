@@ -10,7 +10,7 @@
         </div>
         <div class="movie-content">
           <h1>
-            Title: <span>{{ getById.title }}</span>
+             <span>{{ getById.title }}</span>
           </h1>
           <p class="movie-fact tagline">
             <span>Tagline:</span> "{{ getById.tagline }}"
@@ -23,7 +23,9 @@
           </p>
         </div>
       </div>
+      <div class="btn_single_movie">
       <NuxtLink class="button" :to="{ name: 'index' }"> Back </NuxtLink>
+      </div>
     </div>
   </div>
 </template>

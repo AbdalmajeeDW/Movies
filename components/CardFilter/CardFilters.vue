@@ -32,7 +32,7 @@
                   class="button button-light"
                   :to="{ name: 'movies-movieid' }"
                 >
-                  Get Morec
+                  Get More
                 </NuxtLink>
               </div>
             </div>

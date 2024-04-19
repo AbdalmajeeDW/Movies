@@ -12,7 +12,11 @@
       "
     >
       <template v-slot:header>
-        <v-switch @click="toggleDarkMode" hide-details inset></v-switch>
+        <div class="toggle" >
+        <div @click="toggleDarkMode" class="toggleIcon">
+          <span :class="model === true? 'mdi mdi-weather-night':'mdi mdi-weather-sunny'"></span>
+        </div>
+        </div>
       </template>
     </Drawer>
    
@@ -55,7 +59,7 @@ export default {
   name: "DefaultLayout",
   head() {
     return {
-      title: "Movie App - Latest Streaming Movie Info",
+      // title: "Movie App - Latest Streaming Movie Info",
       meta: [
         {
           hid: "descripaton",

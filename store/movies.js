@@ -8,19 +8,19 @@ export const state = () => ({
   isLoading: true,
   currentState: "",
   loading: false,
+  loader: false,
 });
 
 export const mutations = {
-  changeSearchMovie(state, movie) {
+  changeSearchMovie(state, movie, loader) {
     state.allMovies = [];
+    state.loader = loader;
+
     state.searchAllMovies.push(movie);
     state.isLoading = false;
   },
   changeAllMovies(state, e) {
-    state.loading = true;
     state.allMovies.push(e);
-    if (state.allMovies.length === 0) state.loading = true;
-    else state.loading = false;
   },
   removeAllMovies(state) {
     state.allMovies = [];
@@ -87,13 +87,15 @@ export const actions = {
       });
   },
   searchMovies({ commit }, payload) {
+    let loader = false;
     axios
       .get(
         `https://api.themoviedb.org/3/search/movie?api_key=842c58bc228bfafc96a8160a9c7d952a&language=en-US&page=1&query=${payload}`
       )
       .then((movie) => {
         movie.data.results.forEach((mov) => {
-          commit("changeSearchMovie", mov, payload);
+          loader = true;
+          commit("changeSearchMovie", mov, payload, loader);
         });
       });
   },

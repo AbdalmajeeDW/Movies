@@ -1,10 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600&display=swap");
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px dotted #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Karla", sans-serif;
-  scroll-behavior: smooth;
+}
+
+.search {
+  padding: 20px 75px;
 }
 
 .page-enter-active,
@@ -21,12 +47,43 @@
   background-color: #252525 !important;
   min-height: 100vh;
 }
+.app-dark .toggle {
+  width: 55px;
+  transition: 0.5s ease-in;
+  box-shadow: 0 0 11px -6px white;
+  height: 30px;
+  background-color: #252525;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.app-dark .toggle .toggleIcon {
+  cursor: pointer;
+  color: white;
+}
+.app-dark .v-navigation-drawer__content {
+  background: #252525 !important;
+}
+.app-dark .theme--light.v-list-item {
+  color: white !important;
+}
+.app-dark .v-icon.v-icon {
+  color: white;
+}
+.app-dark .v-toolbar__content, .app-dark .v-toolbar__extension {
+  background: #252525 !important;
+}
+.app-dark .v-toolbar__title {
+  color: white;
+}
 .app-dark .site-footer {
   box-shadow: 1px 1px 4px 1px rgb(104, 104, 104);
   background-color: #252525 !important;
+  padding: 20px 75px;
   font-size: 15px;
   line-height: 24px;
-  color: #dadada !important;
+  color: #f5f5f5 !important;
 }
 .app-dark .site-footer h6 {
   color: #fff;
@@ -84,6 +141,13 @@
 @media (max-width: 767px) {
   .app-dark .site-footer {
     padding-bottom: 0;
+  }
+  .app-dark .home .search {
+    padding: 20px 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
   .app-dark .site-footer .copyright-text,
   .app-dark .site-footer .social-icons {
@@ -144,6 +208,13 @@
   background-color: green;
 }
 @media (max-width: 767px) {
+  .app-dark .home .search {
+    padding: 20px 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
   .app-dark .social-icons li.title {
     display: block;
     margin-right: 0;
@@ -176,6 +247,9 @@
 .app-dark .infoF {
   margin-top: 5px;
 }
+.app-dark .infoF p {
+  color: #f8f7f7;
+}
 .app-dark .v-application a {
   color: white !important;
 }
@@ -187,7 +261,7 @@
   height: 40px;
 }
 .app-dark .home .movies {
-  padding: 32px 16px;
+  padding: 32px 75px;
 }
 .app-dark .home .movies .movies-grid {
   display: grid;
@@ -246,6 +320,7 @@
 .app-dark .home .movies .movies-grid .movie .movie-img .overvieww {
   line-height: 1.5;
   position: absolute;
+  font-size: 14px;
   bottom: -26px;
   background-color: #00548f;
   padding: 12px;
@@ -297,6 +372,7 @@
   position: absolute;
   top: 0;
   margin: 0;
+  padding: 20px 75px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -358,8 +434,8 @@
   align-items: center;
   padding: 32px 16px;
 }
-.app-dark .col .container .button {
-  margin-top: 50px;
+.app-dark .col .container .btn_single_movie {
+  padding: 10px 75px;
 }
 .app-dark .col .container .movie-info {
   display: flex;
@@ -369,6 +445,7 @@
   gap: 32px;
   color: #ffffff;
   margin-top: 100px;
+  padding: 20px 75px;
 }
 @media (min-width: 800px) {
   .app-dark .col .container .movie-info {
@@ -414,23 +491,36 @@
   font-weight: 600;
   text-decoration: underline;
 }
-.app-dark .col .container .movie-info .movie-content .tagline {
-  font-style: italic;
-}
 .app-dark .col .container .movie-info .movie-content .tagline span {
   font-style: normal;
 }
 
 .app-light {
-  background-color: #dadada !important;
+  background-color: #f5f5f5 !important;
   min-height: 100vh;
 }
+.app-light .toggle {
+  width: 55px;
+  transition: 0.5s ease-in;
+  height: 30px;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 13px -4px black;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  justify-content: end;
+}
+.app-light .toggle .toggleIcon {
+  cursor: pointer;
+  color: black;
+}
 .app-light .theme--dark.v-app-bar.v-toolbar.v-sheet {
-  background-color: #dadada !important;
+  background-color: #f5f5f5 !important;
   color: #252525 !important;
 }
 .app-light .theme--dark.v-navigation-drawer {
-  background-color: #dadada !important;
+  background-color: #f5f5f5 !important;
 }
 .app-light .v-navigation-drawer .v-list:not(.v-select-list) {
   color: #252525 !important;
@@ -470,11 +560,11 @@
   border: 2px solid #00548f;
   border-radius: 5px;
   padding: 5px;
-  color: white;
+  color: black;
   height: 40px;
 }
 .app-light .home .movies {
-  padding: 32px 16px;
+  padding: 32px 75px;
 }
 .app-light .home .movies .movies-grid {
   display: grid;
@@ -524,8 +614,9 @@
   justify-content: center;
   align-items: center;
   width: 40px;
+  border-radius: 20px;
   height: 40px;
-  background-color: #2c3841;
+  background-color: #c2c2c2;
   color: #0f0d0d;
   border-radius: 0 0 16px 0;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -533,10 +624,11 @@
 .app-light .home .movies .movies-grid .movie .movie-img .overvieww {
   line-height: 1.5;
   position: absolute;
-  bottom: -30;
+  bottom: -26px;
   background-color: #00548f;
   padding: 12px;
   color: #fff;
+  font-size: 14px;
   transform: translateY(108%);
   transition: 0.2s ease-in-out all;
 }
@@ -582,6 +674,7 @@
 .app-light .hero .text-container {
   z-index: 1;
   position: absolute;
+  padding: 20px 75px;
   top: 0;
   margin: 0;
   width: 100%;
@@ -645,14 +738,15 @@
   align-items: center;
   padding: 32px 16px;
 }
-.app-light .col .container .button {
-  margin-top: 50px;
+.app-light .col .container .btn_single_movie {
+  padding: 10px 75px;
 }
 .app-light .col .container .movie-info {
   display: flex;
+  padding: 20px 75px;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 32px;
   color: #141010;
   margin-top: 100px;
@@ -723,17 +817,15 @@
     text-decoration: underline;
   }
 }
-.app-light .col .container .movie-info .movie-content .tagline {
-  font-style: italic;
-}
 .app-light .col .container .movie-info .movie-content .tagline span {
   font-style: normal;
 }
 .app-light .site-footer {
   box-shadow: 1px 1px 4px 1px rgb(104, 104, 104);
-  background-color: #dadada !important;
+  background-color: #f5f5f5 !important;
   padding: 45px 0 20px;
   font-size: 15px;
+  padding: 20px 75px;
   line-height: 24px;
   color: #252525 !important;
 }
@@ -780,7 +872,8 @@
   margin-left: 6px;
   margin-right: 0;
   border-radius: 100%;
-  background-color: #33353d;
+  background-color: white;
+  box-shadow: 0 0 5px -1px black;
 }
 .app-light .copyright-text {
   margin: 0;
@@ -791,6 +884,24 @@
   }
 }
 @media (max-width: 767px) {
+  .app-light .movie .overvieww {
+    line-height: 1.5;
+    position: absolute;
+    bottom: -26px;
+    background-color: #00548f;
+    padding: 12px;
+    color: #fff;
+    font-size: 10px;
+    transform: translateY(108%);
+    transition: 0.2s ease-in-out all;
+  }
+  .app-light .home .search {
+    padding: 20px 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
   .app-light .site-footer {
     padding-bottom: 0;
   }
