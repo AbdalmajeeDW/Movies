@@ -37,7 +37,7 @@
                   : "Movie Details"
               }}
             </h1>
-            <a v-if="$route.path !== '/'" href="/" class="button"
+            <a v-if="$route.path !== '/'" href="/" class="buttonImg"
               >Back To Home</a
             >
           </div>

@@ -171,6 +171,9 @@ html {
   .app-dark .site-footer .social-icons {
     text-align: center;
   }
+  .app-dark .hero .buttonImg {
+    display: none;
+  }
 }
 .app-dark .social-icons {
   padding-left: 0;
@@ -230,6 +233,9 @@ html {
     font-size: 35px;
     text-wrap: nowrap;
   }
+  .app-dark .hero .text-container .buttonImg {
+    display: none;
+  }
   .app-dark .home .search {
     padding: 20px 75px;
     display: flex;
@@ -241,6 +247,9 @@ html {
     display: block;
     margin-right: 0;
     font-weight: 600;
+  }
+  .app-dark .single-movie .btn_single_movie {
+    display: none;
   }
 }
 .app-dark .button {
@@ -368,6 +377,18 @@ html {
 .app-dark .hero {
   height: 400px;
   position: relative;
+}
+.app-dark .hero .buttonImg {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 16px;
+  background-color: #00548f;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease all;
 }
 @media (min-width: 750px) {
   .app-dark .hero {
@@ -526,12 +547,24 @@ html {
   background-color: #f5f5f5 !important;
   min-height: 100vh;
 }
+.app-light .buttonImg {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 16px;
+  background-color: #00548f;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
 .app-light .toggle {
   width: 55px;
   transition: 0.5s ease-in;
   height: 30px;
   background-color: #f5f5f5;
-  box-shadow: 0 0 13px -4px black;
+  box-shadow: 0 0 13px -9px black;
   border-radius: 25px;
   display: flex;
   align-items: center;
@@ -914,6 +947,9 @@ html {
   }
 }
 @media (max-width: 767px) {
+  .app-light .hero .buttonImg {
+    display: none;
+  }
   .app-light .hero .mini-heading {
     font-size: 20px;
   }
