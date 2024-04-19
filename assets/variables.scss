@@ -84,6 +84,9 @@ box-shadow: 0 0 11px -6px white;
     padding: 20px 75px;
     font-size: 15px;
     line-height: 24px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
     color: $main_color_light !important;
   }
 
@@ -932,6 +935,9 @@ box-shadow: 0 0 11px -6px white;
     padding: 20px 75px;
     line-height: 24px;
     color: $main_color_dark !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .site-footer h6 {

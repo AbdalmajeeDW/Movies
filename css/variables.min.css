@@ -83,6 +83,9 @@ html {
   padding: 20px 75px;
   font-size: 15px;
   line-height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: #f5f5f5 !important;
 }
 .app-dark .site-footer h6 {
@@ -828,6 +831,9 @@ html {
   padding: 20px 75px;
   line-height: 24px;
   color: #252525 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .app-light .site-footer h6 {
   color: #fff;
