@@ -5,11 +5,11 @@
     <div class="search">
       <input
         style="border"
-        @keyup.enter="search"
         label="Label"
         v-model="searching"
         prepend-icon="mdi-vuetify"
       />
+      <button @click="search" class="button"><span class="mdi mdi-magnify"></span></button>
       <button @click="clear" class="button">Clear</button>
     </div>
     <div>
@@ -38,20 +38,21 @@ export default {
     return {
       searching: "",
       sea: "",
+      loader:false,
     };
   },
   
   methods: {
     search() {
+      this.loader=true;
       this.$store.dispatch("movies/searchMovies", this.searching);
       this.searching = "";
       this.$store.dispatch("movies/removeAllMovies");
-      console.log(this.loader);
+      this.loader=false
     },
     clear() {
       this.$store.dispatch("movies/removeAllMovies");
       this.$store.dispatch("movies/getAllMovies");
-      console.log(this.loading);
     },
   },
 
