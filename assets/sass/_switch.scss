@@ -1,0 +1,28 @@
+.app-dark,
+.app-light {
+  .toggle {
+    width: 55px;
+    transition: 0.5s linear;
+    box-shadow: 0 0 11px -6px white;
+    height: 30px;
+    background-color: #252525;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    .toggleIcon {
+      cursor: pointer;
+      color: white;
+    }
+  }
+  &.app-light {
+    .toggle {
+      background-color: #e6e3e3;
+      justify-content: flex-end;
+      padding-right: 10px;
+      .toggleIcon {
+        color: black;
+      }
+    }
+  }
+}

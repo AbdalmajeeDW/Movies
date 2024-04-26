@@ -9,15 +9,15 @@
                 :src="`https://image.tmdb.org/t/p/w500/${movie.poster_path}`"
                 alt=""
               />
-              <p class="review">
+              <div class="review">
                 {{ movie.vote_average }}
-              </p>
-              <p class="overvieww">
+              </div>
+              <div class="overvieww">
                 {{ movie.overview }}
-              </p>
+              </div>
             </div>
             <div class="infoF">
-              <p class="release">
+              <div class="release">
                 Released:
                 {{
                   new Date(movie.release_date).toLocaleDateString("en-us", {
@@ -26,7 +26,7 @@
                     year: "numeric",
                   })
                 }}
-              </p>
+              </div>
               <div @click="() => movieById(movie.id)" type="">
                 <NuxtLink
                   class="button button-light"

@@ -1,9 +1,9 @@
 <template lang="">
   <div class="trends">
-      <NuxtLink class="button " :to="{ name: 'moviesTrends-trends' }">
+      <NuxtLink class="tabs" :to="{ name: 'moviesTrends-trends' }">
         Trending
       </NuxtLink>
-      <NuxtLink class="button " :to="{ name: 'bestMoviesRated-topRated' }">
+      <NuxtLink class="tabs" :to="{ name: 'bestMoviesRated-topRated' }">
         Top Rated
       </NuxtLink>
     </div>
@@ -13,13 +13,3 @@ export default {
 
 }
 </script>
-<style lang="scss">
-.trends {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  margin-top: 30px !important;
-  // margin-left: 50px;
-}
-</style>

@@ -1,6 +1,7 @@
 <template>
   
-  <div class="home">
+  <div class="home ">
+  <div class="container">
   
     <div class="search">
       <input
@@ -9,8 +10,8 @@
         v-model="searching"
         prepend-icon="mdi-vuetify"
       />
-      <button @click="search" class="button"><span class="mdi mdi-magnify"></span></button>
-      <button @click="clear" class="button">Clear</button>
+      <button @click="search" class="tabs"><span class="mdi mdi-magnify"></span></button>
+      <button @click="clear" class="tabs">Clear</button>
     </div>
     <div>
       <span v-if="loader"class="loader"></span>
@@ -21,6 +22,7 @@
     
     
     </div>
+  </div>
   </div>
 </template>
 

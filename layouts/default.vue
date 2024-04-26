@@ -14,7 +14,7 @@
       <template v-slot:header>
         <div class="toggle" >
         <div @click="toggleDarkMode" class="toggleIcon">
-          <span :class="model === true? 'mdi mdi-weather-night':'mdi mdi-weather-sunny'"></span>
+          <span :class="model === true? 'mdi mdi-weather-night':'mdi mdi-white-balance-sunny'"></span>
         </div>
         </div>
       </template>
@@ -23,6 +23,7 @@
     <v-main >
       <div class="hero">
         <img src="../assets/images/movieHero.jpg" alt="" />
+  <div class="container">
         <div class="text-container">
           <div class="text">
             <span class="mini-heading"> now Stremaing </span>
@@ -43,6 +44,8 @@
           </div>
         </div>
       </div>
+  </div>
+
       <Tabs />
       <Nuxt keep-alive/>
       <Footer />

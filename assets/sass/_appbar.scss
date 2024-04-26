@@ -1,0 +1,39 @@
+.app-dark,.app-light{
+    .v-navigation-drawer__content {
+        background: $main_color_dark !important;
+      }
+      .theme--light.v-list-item {
+        color: $main_color_light !important;
+      }
+      .v-icon.v-icon {
+        color: $main_color_light;
+      }
+      .v-btn__content{
+        color: $main_color_light;
+      }
+      .v-toolbar__content,
+      .v-toolbar__extension {
+        background: $main_color_dark !important;
+      }
+      .v-toolbar__title {
+        color: $main_color_light;
+      }
+      &.app-light{
+        .v-toolbar__content,
+        .v-toolbar__extension {
+          background: $main_color_light !important;
+        }
+        .v-toolbar__title {
+          color: $main_color_dark;
+        }
+        .v-navigation-drawer__content {
+            background: $main_color_light !important;
+          }
+          .theme--light.v-list-item {
+            color: $main_color_dark !important;
+          }
+          .v-icon.v-icon {
+            color: $main_color_dark;
+          }
+      }
+}

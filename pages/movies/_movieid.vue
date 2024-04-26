@@ -9,6 +9,10 @@
           />
         </div>
         <div class="movie-content">
+        <div class="container">
+
+
+
           <h1>
              <span>{{ getById.title }}</span>
           </h1>
@@ -21,6 +25,7 @@
           <p class="movie-fact">
             <span>Overview:</span> {{ getById.overview }}
           </p>
+        </div>
         </div>
       </div>
       <div class="btn_single_movie">

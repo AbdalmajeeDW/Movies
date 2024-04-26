@@ -1,0 +1,82 @@
+.app-dark,
+.app-light {
+  .hero {
+    height: 400px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .text-container {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      margin: 0;
+      padding: 20px 75px;
+
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .text {
+        padding: 0 16px;
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .mini-heading {
+        font-weight: 600;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #00548f;
+        margin-bottom: 8px;
+      }
+
+      h1 {
+        color: #fff;
+        font-size: 64px;
+        font-weight: 200;
+        margin-bottom: 8px;
+      
+      }
+    }
+    .buttonImg {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+      padding: 8px 16px;
+      background-color: #00548f;
+      border: none;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s ease all;
+    }
+  }
+  @media (max-width: 767px) {
+    .hero {
+      .text-container {
+        h1 {
+          font-size: 35px;
+        }
+      }
+      .buttonImg {
+        display: none;
+      }
+    }
+  }
+}
