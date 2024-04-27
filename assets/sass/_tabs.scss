@@ -24,6 +24,7 @@
       padding: 32px 75px;
       display: flex;
       align-items: center;
+      // justify-content: center;
       gap: 10px;
       .tabs {
         display: inline-block;
@@ -43,6 +44,13 @@
         padding: 5px;
         color: white;
         height: 42px;
+      }
+    }
+    @media (max-width:768px) {
+      .search{
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }

@@ -77,7 +77,7 @@ html {
 .app-dark .site-footer .container .social-icons a.dribbble:hover,
 .app-light .site-footer .container .social-icons a.dribbble:hover {
   color: white;
-  background-color: green;
+  background-color: #25D366;
 }
 @media (max-width: 767px) {
   .app-dark .site-footer .container.container,
@@ -443,7 +443,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
+  width: 45px;
   height: 40px;
   background-color: #00548f;
   color: #fff;
@@ -558,6 +558,14 @@ html {
   padding: 5px;
   color: white;
   height: 42px;
+}
+@media (max-width: 768px) {
+  .app-dark .home .search,
+  .app-light .home .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .app-dark.app-light .home .search input,
 .app-light.app-light .home .search input {
